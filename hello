@@ -1,0 +1,22 @@
+const polish=()=>{
+  visiblemenu.value = false;
+  let formData = new FormData();
+  formData.append("username","xxxxxx");
+  formData.append("key","xxxxxx");
+  formData.append("cont",hisstring);
+  let url = 'http://127.0.0.1:5000/getpolish' //访问后端接口的url
+  let method = 'post'
+  axios({
+    method,
+    url,
+    data: formData,
+  }).then(res => {
+    alert(res.data.answer)
+    console.log(res.data.answer);
+  });
+}
+————————————————
+
+                            版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
+                        
+原文链接：https://blog.csdn.net/weixin_38898884/article/details/139813936
